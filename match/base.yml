@@ -2,11 +2,17 @@ global_vars:
   - name: "mydate"
     type: "date"
     params:
-        format: "%Y-%m-%d"
+      format: "%Y-%m-%d"
   - name: "mytime"
     type: "date"
     params:
       format: "%H:%M:%S"
+
+  - name: "my_compact_date"
+    type: "date"
+    params:
+      format: "%y%m%d"
+
 # espanso match file
 
 # For a complete introduction, visit the official docs at: https://espanso.org/docs/
@@ -44,5 +50,23 @@ matches:
         type: shell
         params:
           cmd: "echo 'Hello from your shell'"
+
+  - trigger: ":oz:"
+    replace: "BE_03_{{my_compact_date}}_중간출석_"
+
+  - trigger: ":=>:"
+    replace: "⇒"
+
+  - trigger: ":<=:"
+    replace: "⇐"
+
+  - trigger: ":<=>:"
+    replace: "⇔"
+
+  - trigger: ":<-:"
+    replace: "←"
+
+  - trigger: ":->:"
+    replace: "→"
 
   # And much more! For more information, visit the docs: https://espanso.org/docs/
