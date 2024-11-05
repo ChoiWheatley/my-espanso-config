@@ -51,9 +51,6 @@ matches:
         params:
           cmd: "echo 'Hello from your shell'"
 
-  - trigger: ":oz:"
-    replace: "BE_03_{{my_compact_date}}_중간출석_"
-
   - trigger: ":=>:"
     replace: "⇒"
 
